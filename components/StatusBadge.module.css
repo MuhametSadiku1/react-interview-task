@@ -1,0 +1,28 @@
+.statusBadge {
+  width: 130px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.onRoad {
+    background-color: #ecde7c;
+  }
+
+  &.completed {
+    background-color: #7ac14d;
+  }
+
+  &.onHold {
+    background-color: #fe4c4a;
+  }
+
+  &.inProgress {
+    background-color: #b3d99b;
+  }
+}
+
+.statusBadge .onHold {
+  background-color: #ecde7c;
+}

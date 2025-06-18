@@ -1,0 +1,40 @@
+.header {
+  max-width: calc(100% - 20px);
+  margin: 10px;
+  height: 124px;
+  display: flex;
+  gap: 1rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 16px;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.statusBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: 1.875rem;
+}
+
+.onRoad {
+  background-color: var(--on-road);
+  color: #fff;
+}
+
+.completed {
+  background-color: var(--completed);
+  color: #fff;
+}
+
+.onHold {
+  background-color: #f44336;
+  color: #fff;
+}
