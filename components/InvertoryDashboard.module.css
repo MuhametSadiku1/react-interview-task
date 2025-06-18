@@ -1,0 +1,48 @@
+.dashboardContainer {
+  width: calc(100% - 380px);
+  height: 500px;
+  margin: 10px;
+  margin-left: 370px;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.headerRow {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f8f8fa;
+}
+
+.emptyState {
+  width: 100%;
+  height: calc(
+    100% - 52px
+  ); /* Adjusted for header height (32input + 10margin + 10margin)  */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.emptyStateText {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+
+  h4 {
+    font-weight: 600;
+  }
+
+  p {
+    font-weight: 400;
+  }
+}
