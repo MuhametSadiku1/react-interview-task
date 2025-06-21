@@ -14,15 +14,19 @@
 }
 
 .sidebarTitle {
+  height: 45px !important;
+  padding: 10px 20px;
   font-size: 1rem;
   font-weight: 600;
-  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   background-color: #f8f8fa;
 }
 
 .navList {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 45px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -64,5 +68,6 @@
     background-color: #1264a3;
     border: none;
     border-radius: 6px;
+    cursor: pointer;
   }
 }

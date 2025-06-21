@@ -9,6 +9,7 @@ const Sidebar = () => {
       <nav className={styles.navList}>
         <ul className={styles.itemsList}>
           <li className={styles.navItem}>
+            {/* href needs to have the jobsite and the id */}
             <Link href="/sidewalk" className={styles.navLink}>
               Sidewalk Shed
             </Link>
