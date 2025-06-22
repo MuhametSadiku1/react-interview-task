@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./Main.module.css";
 import Invertory from "./Invertory";
+import SearchBar from "./SearchBar";
+import ActionButton from "./ActionButton";
 
 const Main = () => {
   return (
@@ -20,16 +22,8 @@ const Main = () => {
           </p>
         </div>
         <div className={styles.actions}>
-          <div className={styles.searchBar}>
-            <span>
-              <img src="/search.svg" alt="Search" />
-            </span>
-            <input type="text" placeholder="Search a driver" />
-          </div>
-          <button className={styles.createButton}>
-            <p>Create</p>
-            <span className={styles.plus}>+</span>
-          </button>
+          <SearchBar />
+          <ActionButton type={"back"} />
         </div>
       </div>
       <Invertory />

@@ -1,0 +1,90 @@
+.actionButton {
+  width: 150px;
+  height: 32px;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  p {
+    width: calc(100% - 32px);
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.create {
+  background-color: #71cf48;
+
+  .icon {
+    border-left: 1.34px solid #68c142;
+  }
+
+  &:hover {
+    background-color: #68c142;
+
+    .icon {
+      border-left: 1.34px solid #71cf48;
+    }
+  }
+}
+
+.cancel {
+  background-color: #fe4c4a;
+
+  .icon {
+    border-left: 1.34px solid #eb4345;
+  }
+
+  &:hover {
+    background-color: #eb4345;
+
+    .icon {
+      border-left: 1.34px solid #fe4c4a;
+    }
+  }
+}
+
+.save {
+  background-color: #71cf48;
+
+  .icon {
+    border-left: 1.34px solid #68c142;
+  }
+
+  &:hover {
+    background-color: #68c142;
+
+    .icon {
+      border-left: 1.34px solid #71cf48;
+    }
+  }
+}
+
+.back {
+  background-color: #1264a3;
+
+  .icon {
+    border-left: 1.34px solid #0f5c97;
+  }
+
+  &:hover {
+    background-color: #0f5c97;
+
+    .icon {
+      border-left: 1.34px solid #1264a3;
+    }
+  }
+}

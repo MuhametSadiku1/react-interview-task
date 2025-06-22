@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./Sidebar.module.css";
+import ActionButton from "./ActionButton";
 
 const Sidebar = () => {
   return (
@@ -21,7 +22,7 @@ const Sidebar = () => {
           </li>
         </ul>
         <div className={styles.buttonContainer}>
-          <button>Go Back</button>
+          <ActionButton type="back" />
         </div>
       </nav>
     </aside>

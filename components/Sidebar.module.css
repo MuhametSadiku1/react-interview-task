@@ -40,20 +40,26 @@
 .navItem {
   width: 100%;
   font-size: 1rem;
-  padding: 5px 0;
   text-align: center;
   font-weight: 400;
   margin-bottom: 10px;
   background-color: #f8f8fa;
   border-radius: 6px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .navItem:hover,
 .navItem.active {
-  background: #364152;
+  color: #f8f8fa;
+  background: #67aa3c;
 }
 
 .navLink {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 0;
   text-decoration: none;
 }
 

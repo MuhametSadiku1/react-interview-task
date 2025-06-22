@@ -2,12 +2,6 @@ import React from "react";
 
 import styles from "./StatusBadge.module.css";
 
-const statusColors = {
-  Completed: "green",
-  OnHold: "orange",
-  InProgress: "blue",
-};
-
 type Status = "On Road" | "Completed" | "On Hold" | "In Progress";
 
 interface StatusBadgeProps {
