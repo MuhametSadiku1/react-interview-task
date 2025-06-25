@@ -1,10 +1,24 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import styles from "./Main.module.css";
 import Invertory from "./Invertory";
 import SearchBar from "./SearchBar";
 import ActionButton from "./ActionButton";
+import Modal from "./Modal";
+import CreateModal from "./CreateModal";
 
 const Main = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleCreateClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <main className={styles.main}>
       <div className={styles.mainHeader}>
@@ -23,10 +37,11 @@ const Main = () => {
         </div>
         <div className={styles.actions}>
           <SearchBar />
-          <ActionButton type={"back"} />
+          <ActionButton type={"create"} onClick={handleCreateClick} />
         </div>
       </div>
       <Invertory />
+      {isModalOpen && <CreateModal handleCloseModal={handleCloseModal} />}
     </main>
   );
 };

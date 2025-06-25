@@ -1,7 +1,7 @@
 .invertory {
   width: 100%;
   height: calc(100% - 90.4px);
-  padding: 20px;
+  padding: 20px 0;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -10,6 +10,7 @@
 .invertoryHeader {
   width: 70%;
   margin: 0 auto;
+  padding-right: 8px;
   max-width: 864px;
   display: flex;
   justify-content: space-between;
