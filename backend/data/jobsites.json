@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1750972201559",
+    "name": "1658 E 23rd St, Brooklyn, NY 11229, USA",
+    "category": [
+      "Sidewalk Shed"
+    ],
+    "status": "Completed"
+  },
+  {
+    "id": "1750973043600",
+    "name": "1705 E 22nd St, Brooklyn, NY 11229, USA",
+    "category": [
+      "Sidewalk Shed"
+    ],
+    "status": "On Hold"
+  },
+  {
+    "id": "1751006750137",
+    "name": "256 Bay 19th St, Brooklyn, NY 11214, USA",
+    "category": [
+      "Sidewalk Shed"
+    ],
+    "status": "On Hold"
+  }
+]
