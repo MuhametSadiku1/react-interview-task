@@ -1,15 +1,38 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Main.module.css";
 import Invertory from "./Invertory";
 import SearchBar from "./SearchBar";
 import ActionButton from "./ActionButton";
-import Modal from "./Modal";
 import CreateModal from "./CreateModal";
+import { Jobsite } from "@/types/types";
 
 const Main = () => {
+  const [jobsites, setJobsites] = useState<Jobsite[]>([]);
+  const [search, setSearch] = useState<string>("");
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    const fetchJobsites = async () => {
+      try {
+        const res = await fetch("http://localhost:5500/jobsites");
+        if (!res.ok) throw new Error("Failed to fetch jobsites");
+        const data = await res.json();
+        setJobsites(
+          data.map((jobsite: Jobsite) => ({
+            id: jobsite.id,
+            name: jobsite.name,
+            category: jobsite.category || [],
+            status: jobsite.status,
+          }))
+        );
+      } catch (err: any) {
+        console.log(err);
+      }
+    };
+    fetchJobsites();
+  }, []);
 
   const handleCreateClick = () => {
     setIsModalOpen(true);
@@ -36,11 +59,13 @@ const Main = () => {
           </p>
         </div>
         <div className={styles.actions}>
-          <SearchBar />
+          <SearchBar value={search} onChange={setSearch} />
           <ActionButton type={"create"} onClick={handleCreateClick} />
         </div>
       </div>
-      <Invertory />
+      <Invertory jobsites={jobsites.filter(jobsite =>
+        jobsite.name.toLowerCase().includes(search.toLowerCase())
+      )} />
       {isModalOpen && <CreateModal handleCloseModal={handleCloseModal} />}
     </main>
   );

@@ -5,11 +5,14 @@ import Table from "@/components/Table";
 import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { TableRow } from "@/types/types";
+import styles from "../../../../components/InventoryDashboard.module.css"
+import SearchBar from "@/components/SearchBar";
 
 const Page = () => {
   const params = useParams();
   const id = params?.id;
   const [items, setItems] = useState<TableRow[]>([]);
+  const [search, setSearch] = useState<string>("");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -33,8 +36,14 @@ const Page = () => {
   }, [id]);
 
   return (
-    <InventoryDashboard headerTitle={"Sidewalk"}>
-      {loading ? <div>Loading...</div> : <Table data={items} />}
+    <InventoryDashboard>
+      <div className={styles.headerRow}>
+        <span className={styles.headerTitle}>Sidewalk</span>
+        <SearchBar value={search} onChange={setSearch} />
+      </div>
+      {loading ? <div>Loading...</div> : <Table data={items.filter(item =>
+        item.item.toLowerCase().includes(search.toLowerCase())
+      )} />}
     </InventoryDashboard>
   );
 };
